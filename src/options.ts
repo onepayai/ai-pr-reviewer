@@ -11,6 +11,7 @@ export class Options {
   reviewCommentLGTM: boolean
   pathFilters: PathFilter
   systemMessage: string
+  userMessage: string
   openaiLightModel: string
   openaiHeavyModel: string
   openaiModelTemperature: number
@@ -32,6 +33,7 @@ export class Options {
     reviewCommentLGTM = false,
     pathFilters: string[] | null = null,
     systemMessage = '',
+    userMessage = '',
     openaiLightModel = 'gpt-3.5-turbo',
     openaiHeavyModel = 'gpt-3.5-turbo',
     openaiModelTemperature = '0.0',
@@ -50,6 +52,7 @@ export class Options {
     this.reviewCommentLGTM = reviewCommentLGTM
     this.pathFilters = new PathFilter(pathFilters)
     this.systemMessage = systemMessage
+    this.userMessage = userMessage
     this.openaiLightModel = openaiLightModel
     this.openaiHeavyModel = openaiHeavyModel
     this.openaiModelTemperature = parseFloat(openaiModelTemperature)
@@ -73,6 +76,7 @@ export class Options {
     info(`review_comment_lgtm: ${this.reviewCommentLGTM}`)
     info(`path_filters: ${this.pathFilters}`)
     info(`system_message: ${this.systemMessage}`)
+    info(`user_message: ${this.userMessage}`)
     info(`openai_light_model: ${this.openaiLightModel}`)
     info(`openai_heavy_model: ${this.openaiHeavyModel}`)
     info(`openai_model_temperature: ${this.openaiModelTemperature}`)

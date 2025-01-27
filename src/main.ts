@@ -21,6 +21,7 @@ async function run(): Promise<void> {
     getBooleanInput('review_comment_lgtm'),
     getMultilineInput('path_filters'),
     getInput('system_message'),
+    getInput('user_message'),
     getInput('openai_light_model'),
     getInput('openai_heavy_model'),
     getInput('openai_model_temperature'),
@@ -29,7 +30,7 @@ async function run(): Promise<void> {
     getInput('openai_concurrency_limit'),
     getInput('github_concurrency_limit'),
     getInput('openai_base_url'),
-    getInput('language')
+    getInput('language'),
   )
 
   // print options
